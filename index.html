@@ -22,9 +22,7 @@
 
         #game-wrapper {
             position: relative;
-            border: 10px solid #331111;
-            background: #000;
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+            background: #c6ccc9;
         }
 
         canvas {
@@ -48,7 +46,7 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            font-size: 14px;
+            font-size: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
             pointer-events: none;
@@ -90,8 +88,8 @@
     <div id="game-wrapper">
         <div class="ui-hud">
             HEALTH: <span id="hp-val">100</span>
-            LEVEL: <span id="lv-val">1</span>
-            SCALES: <span id="sc-val">0</span>
+            LEVEL: <span id="lv-val">1</span><br>
+            SCALES: <span id="sc-val">0</span><br>
         </div>
         <canvas id="gameCanvas"></canvas>
     </div>
@@ -113,8 +111,8 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 // Retro Resolution (Standard 16:9 8-bit scale)
-canvas.width = 384; 
-canvas.height = 216;
+canvas.width = 400; 
+canvas.height = 250;
 
 const config = {
     gravity: 0.22,
