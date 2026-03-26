@@ -29,7 +29,7 @@
         canvas {
             display: block;
             image-rendering: pixelated; /* Keeps pixels sharp, not blurry */
-            background: linear-gradient(#100010, #8a8b91);
+            background: linear-gradient(#202060, #ff7e5f, #feb47b);
         }
 
         /* Scanline Overlay for that CRT TV look */
@@ -235,11 +235,9 @@ function update() {
 function render() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw Ground (8-bit purple/dark brick)
-    ctx.fillStyle = "#1d3d18";
-    ctx.fillRect(0, config.groundY, canvas.width, canvas.height - config.groundY);
-    ctx.fillStyle = "#331144";
-    ctx.fillRect(0, config.groundY, canvas.width, 2);
+    // Draw Ground (8-bit brick)
+    ctx.fillStyle = '#1a3c15'; // A solid dark forest green
+    ctx.fillRect(0, canvas.height - 40, canvas.width, 40);
 
     // Draw Ember (The Protagonist)
     // Body
