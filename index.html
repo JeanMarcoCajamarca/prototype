@@ -89,7 +89,7 @@
 
     <div id="game-wrapper">
         <div class="ui-hud">
-            HP: <span id="hp-val">100</span> | LV: <span id="lv-val">1</span><br>
+            HEALTH: <span id="hp-val">100</span> | LEVEL: <span id="lv-val">1</span><br>
             SCALES: <span id="sc-val">0</span>
         </div>
         <canvas id="gameCanvas"></canvas>
@@ -235,7 +235,7 @@ function render() {
     ctx.fillRect(ember.x + 11, ember.y - 3, 3, 4);
 
     // Eyes
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "white";
     let eyePos = ember.facing === 1 ? ember.x + 12 : ember.x + 3;
     ctx.fillRect(eyePos, ember.y + 5, 3, 3);
 
