@@ -120,6 +120,24 @@ const config = {
     scrollSpeed: 0
 };
 
+// Background Music Setup
+const bgMusic = new Audio('audio/Salmodia.mp3');
+bgMusic.loop = true;
+bgMusic.volume = 0.5; // Sets volume to 50%
+
+// Browser policy requires a user interaction to play audio
+window.addEventListener('keydown', () => {
+    if (bgMusic.paused) {
+        bgMusic.play().catch(e => console.log("Audio play blocked until interaction."));
+    }
+}, { once: true });
+
+window.addEventListener('touchstart', () => {
+    if (bgMusic.paused) {
+        bgMusic.play().catch(e => console.log("Audio play blocked until interaction."));
+    }
+}, { once: true });
+    
 const ember = {
     x: 60,
     y: 100,
