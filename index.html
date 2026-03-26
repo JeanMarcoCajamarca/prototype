@@ -35,7 +35,7 @@
         #game-wrapper::after {
             content: "";
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0; left: 0; width: 250%; height: 250%;
             background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
                         linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
             background-size: 100% 3px, 3px 100%;
@@ -87,9 +87,9 @@
 
     <div id="game-wrapper">
         <div class="ui-hud">
-            HEALTH: <span id="hp-val">100</span>
+            HEALTH: <span id="hp-val">100</span><br>
             LEVEL: <span id="lv-val">1</span><br>
-            SCALES: <span id="sc-val">0</span><br>
+            SCALES: <span id="sc-val">0</span>
         </div>
         <canvas id="gameCanvas"></canvas>
     </div>
@@ -228,7 +228,7 @@ function render() {
     ctx.fillRect(ember.x, ember.y, ember.w, ember.h);
     
     // Horns/Wings Detail
-    ctx.fillStyle = "#880000";
+    ctx.fillStyle = "#c4972d";
     ctx.fillRect(ember.x + (ember.facing === 1 ? -2 : 16), ember.y + 2, 4, 4);
     ctx.fillRect(ember.x + 4, ember.y - 3, 3, 4);
     ctx.fillRect(ember.x + 11, ember.y - 3, 3, 4);
